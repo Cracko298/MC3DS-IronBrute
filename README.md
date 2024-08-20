@@ -1,5 +1,4 @@
-# MC3DS-IronBrute
-- A mod made to showcase how powerful the MC3DS BJSON Model Editor can be and what it can do.
+## MC3DS-IronBrute
 - Replaces the `Iron Golem` with `Iron Brutes`, which have Custom Logic, Interactive Behaviors, Models, and More!
 - Supports `Minecraft PE (v1.15.2)` (some conversion needed), and `Minecraft New Nintendo 3DS Edition`.
 
@@ -16,6 +15,9 @@ HigherB      |   27    |   30    |   325  |   2.25%    |     91.2k ticks      | 
 Dave         |   27    |   31    |   350  |   2.75%    |         None         |    Yes - Shoulder |       Yes     |
 ===================================================================================================================
 ```
+## Goal of Mod:
+- This was developed to show that Models can be Modified and how to impliment custom logic (seperate from base).
+
 
 ![image](https://github.com/user-attachments/assets/4b3a12fe-c64c-4e86-903d-3f53f3d584af)
 ![image](https://github.com/user-attachments/assets/129a3f84-3825-402b-8d44-f73facee922e)
