@@ -6,11 +6,11 @@ A mod made to showcase how powerful the MC3DS BJSON Model Editor can be and what
 Stats Graph:
 ===================================================================================================
                atk min | atk max | health | scale size | time2grow next stage | is brute rideable |
-Baby         |   10    |   18    |   150  |   0.75%    |      1.9k ticks      |    No             |
-Adult        |   19    |   27    |   225  |   1.00%    |      3.8k ticks      |    No             |
-Elder        |   25    |   29    |   275  |   1.25%    |      7.2k ticks      |    No             |
-Ancient      |   26    |   29    |   300  |   1.85%    |     14.4k ticks      |    No             |
-HigherB      |   27    |   30    |   325  |   2.25%    |     28.8k ticks      |    Yes - Head     |
+Baby         |   10    |   18    |   150  |   0.75%    |      5.7k ticks      |    No             |
+Adult        |   19    |   27    |   225  |   1.00%    |     11.4k ticks      |    No             |
+Elder        |   25    |   29    |   275  |   1.25%    |     22.8k ticks      |    No             |
+Ancient      |   26    |   29    |   300  |   1.85%    |     45.6k ticks      |    No             |
+HigherB      |   27    |   30    |   325  |   2.25%    |     91.2k ticks      |    Yes - Head     |
 Dave         |   27    |   31    |   350  |   2.75%    |         None         |    Yes - Shoulder |
 ===================================================================================================
 ```
