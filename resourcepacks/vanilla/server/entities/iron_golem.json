@@ -1,0 +1,802 @@
+{
+  "minecraft:entity": {
+    "format_version": "1.1.0",
+    "component_groups": {
+      "minecraft:holding_item": {
+        "minecraft:scale": {
+          "value": 1.1
+        },
+        "minecraft:behavior": {
+          "priority": 2,
+          "speed_multiplier": 0.0
+        }
+      },
+      "minecraft:golem_leashed": {
+        "minecraft:behavior.move_towards_restriction": {
+          "priority": 2,
+          "speed_multiplier": 0.0
+        }
+      },
+      "minecraft:exploding": {
+        "minecraft:explode": {
+          "fuseLength": 0.1,
+          "fuseLit": true,
+          "power": 1,
+          "causesFire": false,
+          "destroyAffectedByGriefing": true
+        }
+      },
+      "minecraft:golem_baby": {
+        "minecraft:loot": {
+          "table": "loot_tables/empty.json"
+        },
+        "minecraft:attack": {
+          "damage": {
+            "range_min": 10,
+            "range_max": 18
+          }
+        },
+        "minecraft:health": {
+          "value": 150
+        },
+        "minecraft:behavior.move_towards_target": {
+        "priority": 2,
+        "speed_multiplier": 1.2,
+        "within_radius": 24
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 1,
+        "speed_multiplier": 1.2,
+        "xz_dist": 5,
+        "probability": 0.02
+      },
+        "minecraft:is_baby": {},
+        "minecraft:scale": {
+          "value": 0.75
+        },
+        "minecraft:ageable": {
+          "duration": 5700,
+          "grow_up": {
+            "event": "minecraft:ageable_grow_up",
+            "target": "self"
+          }
+        }
+      },
+      "minecraft:golem_adult": {
+        "minecraft:loot": {
+          "table": "loot_tables/entities/iron_golem.json"
+        },
+        "minecraft:health": {
+          "value": 225
+        },
+        "minecraft:attack": {
+          "damage": {
+            "range_min": 19,
+            "range_max": 27
+          }
+        },
+        "minecraft:behavior.move_towards_target": {
+        "priority": 2,
+        "speed_multiplier": 0.9,
+        "within_radius": 24
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 1,
+        "speed_multiplier": 0.9,
+        "xz_dist": 6,
+        "probability": 0.02
+      },
+      "minecraft:breedable": {
+          "requireTame": false,
+          "breedsWith": {
+            "mateType": "minecraft:iron_golem",
+            "babyType": "minecraft:iron_golem",
+            "breed_event": {
+              "event": "minecraft:entity_born",
+              "target": "baby"
+            }
+          },
+          "breedItems": [
+            "red_flower",
+            "iron_ingot"
+          ]
+        },
+        "minecraft:behavior.breed": {
+          "priority": 3,
+          "speed_multiplier": 0.5
+        },
+        "minecraft:ageable": {
+          "duration": 11400,
+            "grow_up": {
+              "event": "minecraft:ageable_grow_elder",
+              "target": "self"
+            }
+        }
+      },
+      "minecraft:golem_elder": {
+        "minecraft:loot": {
+          "table": "loot_tables/entities/iron_golem.json"
+        },
+        "minecraft:scale": {
+          "value": 1.25
+        },
+        "minecraft:health": {
+          "value": 275
+        },
+        "minecraft:attack": {
+          "damage": {
+            "range_min": 25,
+            "range_max": 29
+          }
+        },
+        "minecraft:behavior.move_towards_target": {
+        "priority": 2,
+        "speed_multiplier": 0.7,
+        "within_radius": 24
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 1,
+        "speed_multiplier": 0.7,
+        "xz_dist": 8,
+        "probability": 0.02
+      },
+      "minecraft:breedable": {
+          "requireTame": false,
+          "breedsWith": {
+            "mateType": "minecraft:iron_golem",
+            "babyType": "minecraft:iron_golem",
+            "breed_event": {
+              "event": "minecraft:entity_born",
+              "target": "baby"
+            }
+          },
+          "breedItems": [
+            "red_flower",
+            "iron_ingot"
+          ]
+        },
+        "minecraft:behavior.breed": {
+          "priority": 3,
+          "speed_multiplier": 0.5
+        },
+        "minecraft:ageable": {
+          "duration": 22800,
+            "grow_up": {
+              "event": "minecraft:ageable_grow_ancient",
+              "target": "self"
+            }
+        }
+      },
+      "minecraft:golem_ancient": {
+        "minecraft:loot": {
+          "table": "loot_tables/entities/iron_golem.json"
+        },
+        "minecraft:scale": {
+          "value": 1.85
+        },
+        "minecraft:health": {
+          "value": 300
+        },
+        "minecraft:attack": {
+          "damage": {
+            "range_min": 25,
+            "range_max": 33
+          }
+        },
+        "minecraft:behavior.move_towards_target": {
+        "priority": 2,
+        "speed_multiplier": 0.6,
+        "within_radius": 24
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 1,
+        "speed_multiplier": 0.6,
+        "xz_dist": 9,
+        "probability": 0.02
+      },
+      "minecraft:breedable": {
+          "requireTame": false,
+          "breedsWith": {
+            "mateType": "minecraft:iron_golem",
+            "babyType": "minecraft:iron_golem",
+            "breed_event": {
+              "event": "minecraft:entity_born",
+              "target": "baby"
+            }
+          },
+          "breedItems": [
+            "red_flower",
+            "iron_ingot"
+          ]
+        },
+        "minecraft:behavior.breed": {
+          "priority": 3,
+          "speed_multiplier": 0.5
+        },
+        "minecraft:ageable": {
+          "duration": 45600,
+            "grow_up": {
+              "event": "minecraft:ageable_grow_higherbeing",
+              "target": "self"
+            }
+        }
+      },
+      "minecraft:golem_higherbeing": {
+        "minecraft:loot": {
+          "table": "loot_tables/entities/iron_golem.json"
+        },
+        "minecraft:scale": {
+          "value": 2.25
+        },
+        "minecraft:health": {
+          "value": 325
+        },
+        "minecraft:attack": {
+          "damage": {
+            "range_min": 27,
+            "range_max": 30
+          }
+        },
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "interact_text": "action.interact.mount",
+          "seats": {
+            "position": [ 0.0, 2.5, 0.0 ]
+          }
+        },
+        "minecraft:item_controllable": {
+          "control_items": [ "red_flower" ]
+        },
+        "minecraft:behavior.controlled_by_player": {
+          "priority": 0
+        },
+        "minecraft:behavior.move_towards_target": {
+        "priority": 2,
+        "speed_multiplier": 0.5,
+        "within_radius": 24
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 1,
+          "speed_multiplier": 0.5,
+          "xz_dist": 10,
+          "probability": 0.02
+       },
+       "minecraft:breedable": {
+          "requireTame": false,
+          "breedsWith": {
+            "mateType": "minecraft:iron_golem",
+            "babyType": "minecraft:iron_golem",
+            "breed_event": {
+              "event": "minecraft:entity_born",
+              "target": "baby"
+            }
+          },
+          "breedItems": [
+            "red_flower",
+            "iron_ingot"
+          ]
+        },
+        "minecraft:behavior.breed": {
+          "priority": 3,
+          "speed_multiplier": 0.5
+        },
+        "minecraft:ageable": {
+          "duration": 91200,
+            "grow_up": {
+              "event": "minecraft:ageable_grow_dave",
+              "target": "self"
+            }
+        }
+      },
+      "minecraft:golem_dave": {
+        "minecraft:loot": {
+          "table": "loot_tables/entities/iron_golem.json"
+        },
+        "minecraft:nameable": {
+          "always_show": true,
+          "name": "Dave",
+          "can_change_name": false
+        },
+        "minecraft:scale": {
+          "value": 2.75
+        },
+        "minecraft:health": {
+          "value": 350
+        },
+        "minecraft:attack": {
+          "damage": {
+            "range_min": 27,
+            "range_max": 31
+          }
+        },
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "interact_text": "action.interact.mount",
+          "seats": {
+            "position": [ 0.7, 2.0, -0.2 ]
+          }
+        },
+        "minecraft:item_controllable": {
+          "control_items": [ "red_flower" ]
+        },
+        "minecraft:behavior.controlled_by_player": {
+          "priority": 0
+        },
+        "minecraft:behavior.move_towards_target": {
+        "priority": 2,
+        "speed_multiplier": 0.7,
+        "within_radius": 24
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 1,
+          "speed_multiplier": 0.45,
+          "xz_dist": 12,
+          "probability": 0.02
+       },
+       "minecraft:breedable": {
+          "requireTame": false,
+          "breedsWith": {
+            "mateType": "minecraft:iron_golem",
+            "babyType": "minecraft:iron_golem",
+            "breed_event": {
+              "event": "minecraft:entity_born",
+              "target": "baby"
+            }
+          },
+          "breedItems": [
+            "red_flower",
+            "iron_ingot"
+          ]
+        },
+        "minecraft:behavior.breed": {
+          "priority": 3,
+          "speed_multiplier": 0.5
+        }
+      },
+      "minecraft:player_created": {
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 2,
+          "entity_types": {
+            "filters": {
+              "other_without_families": [
+                "creeper"
+              ]
+            }
+          }
+        }
+      },
+      "minecraft:village_created": {
+        "minecraft:behavior.defend_village_target": {
+          "priority": 1
+        },
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 2,
+          "entity_types": {
+            "filters": {
+              "other_without_families": [
+                "creeper",
+                "horse",
+                "iron_golem",
+                "villager",
+                "chicken",
+                "horse",
+                "cow",
+                "donkey",
+                "llama",
+                "mushroomcow",
+                "mule",
+                "pig",
+                "rabbit",
+                "sheep"
+              ],
+              "broadcastAnger": true,
+              "broadcastRange": 20
+            }
+          }
+        }
+      },
+      "minecraft:player_attack_family": {
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 3,
+          "entity_types": {
+            "filters": {
+              "other_with_families": [
+                "iron_golem",
+                "villager",
+                "chicken",
+                "horse",
+                "cow",
+                "donkey",
+                "llama",
+                "mushroomcow",
+                "mule",
+                "pig",
+                "rabbit",
+                "sheep"
+              ],
+              "broadcastAnger": true,
+              "broadcastRange": 20,
+              "target": "player"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:identifier": {
+        "id": "minecraft:iron_golem"
+      },
+      "minecraft:type_family": {
+        "family": [
+          "iron_golem",
+          "chicken",
+          "villager",
+          "horse",
+          "cow",
+          "donkey",
+          "llama",
+          "mushroomcow",
+          "mule",
+          "pig",
+          "rabbit",
+          "sheep"
+        ]
+      },
+      "minecraft:nameable": {},
+      "minecraft:collision_box": {
+        "width": 1,
+        "height": 3.0
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/iron_golem.json"
+      },
+      "minecraft:movement": {
+        "value": 0.175
+      },
+      "minecraft:fire_immune": true,
+      "minecraft:navigation.walk": {
+        "can_float": false,
+        "avoid_water": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:attack": {
+        "damage": {
+          "range_min": 19,
+          "range_max": 27
+        }
+      },
+      "minecraft:health": {
+          "value": 200,
+          "max": 325
+      },
+      "minecraft:fall_damage": {
+        "value": 0.0
+      },
+      "minecraft:behavior.enderman_leave_block": {
+        "priority": 3,
+        "probability": 0.5
+      },
+      "minecraft:behavior.enderman_take_block": {
+        "priority": 3,
+        "probability": 0.02
+      },
+      "minecraft:behavior.avoid_mob_type": {
+        "priority": 3,
+        "entity_types": [
+          {
+            "filters": { "other_with_families": "red_flower" },
+            "max_dist": 2,
+            "walk_speed_multiplier": 0.5,
+            "sprint_speed_multiplier": 0.5
+          }
+        ]
+      },
+      "minecraft:knockback_resistance": {
+        "value": 5.0
+      },
+      "minecraft:leashable": {
+        "soft_distance": 0.0,
+        "hard_distance": 0.5,
+        "max_distance": 0.75,
+        "on_leash": {
+          "event": "minecraft:on_leash",
+          "target": "self"
+        },
+        "on_unleash": {
+          "event": "minecraft:on_unleash",
+          "target": "self"
+        }
+      },
+      "minecraft:behavior.melee_attack": {
+        "priority": 1,
+        "target_dist": 1.85,
+        "track_target": true
+      },
+      "minecraft:behavior.move_towards_target": {
+        "priority": 2,
+        "speed_multiplier": 1.0,
+        "within_radius": 24
+      },
+      "minecraft:behavior.take_flower": {
+        "priority": 1,
+        "probability": 0.02
+      },
+      "minecraft:behavior.move_through_village": {
+        "priority": 3,
+        "speed_multiplier": 0.6,
+        "only_at_night": true
+      },
+      "minecraft:behavior.move_towards_restriction": {
+        "priority": 4,
+        "speed_multiplier": 1
+      },
+      "minecraft:behavior.offer_flower": {
+        "priority": 1,
+        "probability": 0.02
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 1,
+        "speed_multiplier": 1,
+        "xz_dist": 5,
+        "probability": 0.02
+      },
+      "minecraft:behavior.tempt": {
+        "priority": 5,
+        "speed_multiplier": 1.0,
+        "items": [
+          "iron_ingot"
+        ],
+        "must_see": true,
+        "must_reach": true
+      },
+      "minecraft:inventory": {
+        "size": 1,
+        "can_be_siphoned_from": false,
+        "private": true
+      },
+      "minecraft:behavior.pickup_items": {
+        "priority": 6,
+        "must_reach": true,
+        "items": [
+          "red_flower"
+        ]
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 7,
+        "look_distance": 10.0,
+        "probability": 0.006
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 6
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 3,
+        "entity_types": [
+          {
+            "filters": {
+              "other_with_families": ["monster", "red_flower"],
+              "other_without_families": "creeper"
+            },
+            "within_default": 20
+          }
+        ],
+        "must_see": true,
+        "must_reach": true,
+        "on_target_acquired": {
+          "event": "minecraft:pickup_item",
+          "target": "self"
+        }
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "randomize": [
+          {
+            "weight": 4.25,
+            "remove": {
+            },
+            "add": {
+              "component_groups": [
+                "minecraft:golem_adult",
+                "minecraft:player_created"
+              ]
+            }
+          },
+          {
+            "weight": 3,
+            "remove": {
+            },
+            "add": {
+              "component_groups": [
+                "minecraft:golem_baby",
+                "minecraft:player_created"
+              ]
+
+            }
+          },
+          {
+            "weight": 2,
+            "remove": {
+            },
+            "add": {
+              "component_groups": [
+                "minecraft:golem_elder",
+                "minecraft:player_created"
+              ]
+
+            }
+          },
+          {
+            "weight": 0.35,
+            "remove": {
+            },
+            "add": {
+              "component_groups": [
+                "minecraft:golem_ancient",
+                "minecraft:player_created"
+              ]
+            }
+          },
+          {
+            "weight": 0.225,
+            "remove": {
+            },
+            "add": {
+              "component_groups": [
+                "minecraft:golem_ancient",
+                "minecraft:player_created"
+              ]
+            }
+          },
+          {
+            "weight": 0.125,
+            "remove": {
+            },
+            "add": {
+              "component_groups": [
+                "minecraft:golem_higherbeing",
+                "minecraft:player_created"
+              ]
+            }
+          },
+          {
+            "weight": 0.05,
+            "remove": {
+            },
+            "add": {
+              "component_groups": [
+                "minecraft:golem_dave",
+                "minecraft:player_created"
+              ]
+            }
+          }
+        ]
+      },
+      "minecraft:entity_born": {
+        "remove": {
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:golem_baby",
+            "minecraft:player_created"
+          ]
+        }
+      },
+      "minecraft:pickup_item": {
+        "add": {
+          "component_groups": [
+            "minecraft:item_picked_up"
+          ]
+        }
+      },
+      "minecraft:item_picked_up": {
+        "remove": {
+          "filters": {
+            "other_type": "item"
+          }
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:holding_item"
+          ]
+        }
+      },
+      "minecraft:start_exploding": {
+        "remove": {},
+        "add": {
+          "component_groups": [
+            "minecraft:exploding"
+          ]
+        }
+      },
+      "minecraft:ageable_grow_up": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": ["minecraft:golem_baby"]
+            },
+            "add": {
+              "component_groups": ["minecraft:golem_adult"]
+            }
+          }
+        ]
+      },
+      "minecraft:on_unleash": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": ["minecraft:holding_item"]
+            }
+          }
+        ]
+      },
+      "minecraft:on_leash": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": ["minecraft:item_picked_up"]
+            }
+          }
+        ]
+      },
+      "minecraft:on_player_damaged": {
+        "sequence": [
+          {
+            "event": "minecraft:start_exploding",
+            "target": "self"
+          }
+        ]
+      },
+      "minecraft:ageable_grow_elder": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": ["minecraft:golem_adult"]
+            },
+            "add": {
+              "component_groups": ["minecraft:golem_elder"]
+            }
+          }
+        ]
+      },
+      "minecraft:ageable_grow_ancient": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": ["minecraft:golem_elder"]
+            },
+            "add": {
+              "component_groups": ["minecraft:golem_ancient"]
+            }
+          }
+        ]
+      },
+      "minecraft:ageable_grow_higherbeing": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": ["minecraft:golem_ancient"]
+            },
+            "add": {
+              "component_groups": ["minecraft:golem_higherbeing"]
+            }
+          }
+        ]
+      },
+      "minecraft:ageable_grow_dave": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": ["minecraft:golem_higherbeing"]
+            },
+            "add": {
+              "component_groups": ["minecraft:golem_dave"]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
