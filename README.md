@@ -1,6 +1,6 @@
 ## MC3DS-IronBrute
 - Replaces the `Iron Golem` with `Iron Brutes`, which have Custom Logic, Interactive Behaviors, Models, and More!
-- Supports `Minecraft PE (v1.15.2)` (some conversion needed), and `Minecraft New Nintendo 3DS Edition`.
+- Supports `Minecraft PE (v1.1.5)` (some conversion needed), and `Minecraft New Nintendo 3DS Edition`.
 - Goal of Mod was to showoff `MC3DS BJSON Model Editor` aka `MC3DS 3D Model Editor`.
 
 ## Tiers of Brutes:
